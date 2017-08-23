@@ -1,0 +1,129 @@
+import javax.security.auth.Subject
+
+//全局配置
+
+allprojects{//配置工程和它的所有子项目
+
+}
+
+artifacts{//配置本工程的发布的artifacts-jar包
+
+}
+
+configurations{//配置工程以来的的配置
+
+}
+
+group 'com.test.gradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java' //so that we can use 'compile', 'testCompile' for dependencies；can use sourceCompatibility
+apply plugin: 'visual-studio'
+
+sourceCompatibility = 1.8
+
+buildscript{//配置build脚本的classpath
+
+}
+
+repositories {//工程仓库配置
+    mavenCentral()
+}
+
+dependencies {//工程依赖配置
+    //map-style notation:
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //group:name:version notation
+    compile 'commons-lang:commons-lang:2.6'
+
+    //declaring arbitrary files as dependencies 定义任意的文件作为jar包,参数为需要定义的jar
+    compile files('hibernate.jar', 'libs/spring.jar')
+
+    //putting all jars from 'libs' onto compile classpath  从lib加载所有的jar到classpath
+    compile fileTree('libs')
+
+    //configuring dependency to specific configuration of the module  指定依赖模块的特定配置
+    compile configuration: 'someConf', group: 'org.someOrg', name: 'someModule', version: '1.0'
+
+    //configuring dependency on 'someLib' module   配置依赖于某个模块
+    compile(group: 'org.myorg', name: 'someLib', version:'1.0') {
+        //explicitly adding the dependency artifact:
+        artifact {
+            //useful when some artifact properties unconventional   当一些jar的属性是非conventional是非常有用
+            name = 'someArtifact' //artifact name different than module name  artifact名字而不是模块名
+            extension = 'someExt'
+            type = 'someType'
+            classifier = 'someClassifier'
+        }
+    }
+
+}
+
+sourceSets{//本程序源集合的配置
+
+}
+
+subprojects{//工程的子项目配置
+
+}
+
+task demo{
+//    outputs.println(Project.getDependencies()[0].getArtifactTypes());
+//    outputs.println(Project.getConfigurations());
+
+//    outputs.println(DEFAULT_BUILD_DIR_NAME);//使用Project使脚本更清晰
+//    outputs.println(Project);//interface org.gradle.api.Project
+    outputs.println(Project.DEFAULT_BUILD_DIR_NAME);//build，所以一般执行build后会生成build目录存放构建文件
+    outputs.println(rootProject);//root project 'Demo'
+    outputs.println(rootProject.toString());//root project 'Demo'
+    Map<String,Object> rootProFields=rootProject.getProperties();
+    for(Map.Entry entry:rootProFields.entrySet()){
+        outputs.println(entry.key+" : "+entry.value);
+    }
+
+    ExtensionContainer container=rootProject.getExtensions();
+    outputs.println(rootProject.getTasksByName("self",true));//[task ':self']
+    outputs.println(rootProject.getTasksByName("cc",true));//没有此任务，[]
+
+    outputs.println(version.toString().endsWith("-SNAPSHOT"));//true\
+}
+
+//reportsDir = file('reports') // Delegates to Project.file() and the Java Plugin
+
+//定义额外变量
+task doStuff {
+    ext.prop1="foo";
+    ext.prop2 = "bar"
+    outputs.println(ext.prop1);//foo
+    outputs.println(ext.prop2);//bar
+    outputs.println(prop2);//bar,gradle有一个属性查找顺序
+}
+
+task outputExt{
+    for(Map.Entry entry:ext.getProperties().entrySet()){
+        outputs.println(entry.key+" : "+entry.value);
+    }
+}
+
+task taskContainerDemo{
+//    TaskContainer.create("emptyTask");//create an empty task
+}
+/**
+ * task demo
+ */
+defaultTasks('myTask0')  // Delegates to Project.defaultTasks()
+
+task myTask0{
+    outputs.println("my task0");
+}
+
+task myTask1{
+    return "my task 1";
+}
+task myTask2{
+}
+
+
+
+
