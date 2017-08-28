@@ -4,10 +4,15 @@
     <output url="file://$MODULE_DIR$/../../dao/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../dao/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../dao/src/main/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../dao/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../dao/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.38" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.6" level="project" />
   </component>
 </module>

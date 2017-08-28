@@ -1,8 +1,15 @@
 //设置工程的名字
-rootProject.name = 'My-Demo'
+rootProject.name = 'Demo'
 
-include 'portal'
-include 'service'
-include 'dao'
-include 'model'
+include 'portal','service','dao'   //可以以数组的形式，该命令会相对于当前目录查找这些子模块
+include 'model'                    //也可以以单个子模块的形式
 include 'utils'
+
+findProject(':portal')?.name = 'web'  //重命名项目名
+def initFC(){
+    println '+----------------------------------+'
+    println '+         init all projects        +'
+    println '+----------------------------------+'
+}
+
+initFC()

@@ -1,7 +1,49 @@
 //全局配置
 
-allprojects{//配置工程和它的所有子项目
+allprojects {//配置工程和它的所有子项目,配置所有项目的通用配置，如果没有子项目的话，则配置的就是当前项目
+//    1.	指定报名，group
+//    2.	指定版本，version
+//    3.	指出应用的插件，apply plugin
+//    4.	指定编译java文件的jdk版本以及，sourceCompatibility
+//    5.	可运行class文件的jvm的版本要求，targetCompatibility
+//    6.	任务执行通用参考项，tasks.withType,tasks.xxxx（如编码格式等，另外上面的某些命令也可以放在这里）
+//    7.	通用仓库
+//    8.	通用依赖
 
+    group 'com.test.gradle'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'  //可以使用compile和testCompile指令
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'groovy'
+    apply plugin: 'visual-studio'
+
+    sourceCompatibility = 1.8 //指定jkd的版本
+    targetCompatibility = 1.8 //指定运行class文件的版本
+
+    //设置全局编译器的版本
+//    tasks.withType(JavaCompile) {
+//        sourceCompatibility = JavaVersion.VERSION_1_7
+//        targetCompatibility = JavaVersion.VERSION_1_7
+//    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    repositories{ //通用仓库配置
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+        //配置本地仓库
+        maven { url 'http://192.168.128.1:11022/repository/maven-central/' }
+        mavenCentral()
+    }
+
+    dependencies{//通用依赖配置
+        testCompile 'junit:junit:4.11'
+    }
 }
 
 artifacts{//配置本工程的发布的artifacts-jar包
@@ -12,26 +54,30 @@ configurations{//配置工程以来的的配置
 
 }
 
-group 'com.test.gradle'
-version '1.0-SNAPSHOT'
 
-apply plugin: 'java' //so that we can use 'compile', 'testCompile' for dependencies；can use sourceCompatibility
-apply plugin: 'visual-studio'
+//apply plugin: 'java' //so that we can use 'compile', 'testCompile' for dependencies；can use sourceCompatibility
+//apply plugin: 'visual-studio'
 
 //依赖groovy，gradle插件在groovy中，这样就可以使用compile依赖命令了
-apply plugin: 'groovy'
+//apply plugin: 'groovy'
 
-sourceCompatibility = 1.8
+//jdk的版本
+//sourceCompatibility = 1.8
+
 
 buildscript{//配置build脚本的classpath
 
 }
 
-repositories {//工程仓库配置
-    mavenCentral()
+//repositories {//工程仓库配置
+//    mavenCentral()
+//}
+
+task commonTask << {
+    println("========= this is common task ===========")
 }
 
-task outputProjName{
+task outputProjName << {
     println('rootProjName::@'+rootProject.name)
 }
 
@@ -112,7 +158,7 @@ subprojects{//工程的子项目配置
 
 }
 
-task demo{
+task demo << {
 //    outputs.println(Project.getDependencies()[0].getArtifactTypes());
 //    outputs.println(Project.getConfigurations());
 
@@ -136,7 +182,7 @@ task demo{
 //reportsDir = file('reports') // Delegates to Project.file() and the Java Plugin
 
 //定义额外变量
-task doStuff {
+task doStuff << {
     ext.prop1="foo";
     ext.prop2 = "bar"
     outputs.println(ext.prop1);//foo
@@ -144,13 +190,13 @@ task doStuff {
     outputs.println(prop2);//bar,gradle有一个属性查找顺序
 }
 
-task outputExt{
+task outputExt << {
     for(Map.Entry entry:ext.getProperties().entrySet()){
         outputs.println(entry.key+" : "+entry.value);
     }
 }
 
-task taskContainerDemo{
+task taskContainerDemo << {
 //    TaskContainer.create("emptyTask");//create an empty task
 }
 /**
@@ -158,14 +204,14 @@ task taskContainerDemo{
  */
 defaultTasks('myTask0')  // Delegates to Project.defaultTasks()
 
-task myTask0{
+task myTask0 << {
     outputs.println("my task0");
 }
 
-task myTask1{
+task myTask1 << {
     return "my task 1";
 }
-task myTask2{
+task myTask2 << {
 }
 
 apply plugin: 'maven-publish'
