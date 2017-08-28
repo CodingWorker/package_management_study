@@ -2,6 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name=".model_main" target="1.8" />
+      <module name=".model_test" target="1.8" />
+      <module name="com.test.gradle.dao_main" target="1.8" />
+      <module name="com.test.gradle.dao_test" target="1.8" />
+      <module name="com.test.gradle.model_main" target="1.8" />
+      <module name="com.test.gradle.model_test" target="1.8" />
+      <module name="com.test.gradle.portal_main" target="1.8" />
+      <module name="com.test.gradle.portal_test" target="1.8" />
+      <module name="com.test.gradle.RESTApi_main" target="1.8" />
+      <module name="com.test.gradle.RESTApi_test" target="1.8" />
+      <module name="com.test.gradle.seRESTApi_main" target="1.8" />
+      <module name="com.test.gradle.seRESTApi_test" target="1.8" />
+      <module name="com.test.gradle.service_main" target="1.8" />
+      <module name="com.test.gradle.service_test" target="1.8" />
+      <module name="com.test.gradle.utils_main" target="1.8" />
+      <module name="com.test.gradle.utils_test" target="1.8" />
       <module name="D_groovy" target="1.8" />
       <module name="D_main" target="1.8" />
       <module name="D_test" target="1.8" />
@@ -41,6 +57,8 @@
       <module name="service_test" target="1.8" />
       <module name="utils_main" target="1.8" />
       <module name="utils_test" target="1.8" />
+      <module name="web_main" target="1.8" />
+      <module name="web_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

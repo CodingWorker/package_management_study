@@ -37,12 +37,12 @@ allprojects {//配置工程和它的所有子项目,配置所有项目的通用�
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 
         //配置本地仓库
-        maven { url 'http://192.168.128.1:11022/repository/maven-central/' }
+//        maven { url 'http://192.168.128.1:11022/repository/maven-central/' }
         mavenCentral()
     }
 
     dependencies{//通用依赖配置
-        testCompile 'junit:junit:4.11'
+        testCompile ('junit:junit:4.11')
     }
 }
 
@@ -73,6 +73,11 @@ buildscript{//配置build脚本的classpath
 //    mavenCentral()
 //}
 
+task "create-srcs" {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
+
 task commonTask << {
     println("========= this is common task ===========")
 }
@@ -95,7 +100,7 @@ dependencies {//工程依赖配置
     compile fileTree('libs')
 
     //configuring dependency to specific configuration of the module  指定依赖模块的特定配置
-    compile configuration: 'someConf', group: 'org.someOrg', name: 'someModule', version: '1.0'
+//    compile configuration: 'someConf', group: 'org.someOrg', name: 'someModule', version: '1.0'
 
     //two methods to declare a dependency:名字和属性都是可选的
     //1-string notion
@@ -124,16 +129,16 @@ dependencies {//工程依赖配置
     testCompile gradleTestKit()
 
     //configuring dependency on 'someLib' module   配置依赖于某个模块
-    compile(group: 'org.myorg', name: 'someLib', version:'1.0') {
-        //explicitly adding the dependency artifact:
-        artifact {
-            //useful when some artifact properties unconventional   当一些jar的属性是非conventional是非常有用
-            name = 'someArtifact' //artifact name different than module name  artifact名字而不是模块名
-            extension = 'someExt'
-            type = 'someType'
-            classifier = 'someClassifier'
-        }
-    }
+//    compile(group: 'org.myorg', name: 'someLib', version:'1.0') {
+//        //explicitly adding the dependency artifact:
+//        artifact {
+//            //useful when some artifact properties unconventional   当一些jar的属性是非conventional是非常有用
+//            name = 'someArtifact' //artifact name different than module name  artifact名字而不是模块名
+//            extension = 'someExt'
+//            type = 'someType'
+//            classifier = 'someClassifier'
+//        }
+//    }
 
 }
 

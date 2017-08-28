@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":service:main" external.linked.project.path="$MODULE_DIR$/../../../service" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.test.gradle" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../service/build/classes/java/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../service/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../service/src/main/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../service/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: my-group:my-name:my-version" level="project" />
+    <orderEntry type="library" name="Gradle: group:name:version" level="project" />
+    <orderEntry type="module" module-name="utils_main" />
+    <orderEntry type="library" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="module" module-name="dao_main" />
+    <orderEntry type="module" module-name="model_main" />
+    <orderEntry type="module" module-name="Demo_main" />
+  </component>
+</module>
