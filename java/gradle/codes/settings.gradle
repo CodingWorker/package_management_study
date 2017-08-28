@@ -1,2 +1,10 @@
-rootProject.name = 'Demo'
+//设置工程的名字
+rootProject.name = 'My-Demo'
+
+include 'portal'
+include 'service'
+include 'dao'
+include 'model'
+include 'utils'
+
 

@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo_main.iml" group="Demo" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo_test.iml" group="Demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My-Demo.iml" filepath="$PROJECT_DIR$/.idea/modules/My-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My-Demo_groovy.iml" filepath="$PROJECT_DIR$/.idea/modules/My-Demo_groovy.iml" group="My-Demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My-Demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/My-Demo_main.iml" group="My-Demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My-Demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/My-Demo_test.iml" group="My-Demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dao.iml" filepath="$PROJECT_DIR$/.idea/modules/dao.iml" group="dao" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dao_main.iml" filepath="$PROJECT_DIR$/.idea/modules/dao_main.iml" group="dao" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dao_test.iml" filepath="$PROJECT_DIR$/.idea/modules/dao_test.iml" group="dao" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model.iml" filepath="$PROJECT_DIR$/.idea/modules/model.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_main.iml" filepath="$PROJECT_DIR$/.idea/modules/model_main.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_test.iml" filepath="$PROJECT_DIR$/.idea/modules/model_test.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal.iml" filepath="$PROJECT_DIR$/.idea/modules/portal.iml" group="portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/portal_main.iml" group="portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/portal_test.iml" group="portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" group="service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service_main.iml" group="service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service_test.iml" group="service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils.iml" group="utils" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils_main.iml" filepath="$PROJECT_DIR$/.idea/modules/utils_main.iml" group="utils" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils_test.iml" filepath="$PROJECT_DIR$/.idea/modules/utils_test.iml" group="utils" />
     </modules>
   </component>
 </project>

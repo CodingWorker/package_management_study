@@ -1,5 +1,3 @@
-import javax.security.auth.Subject
-
 //全局配置
 
 allprojects{//配置工程和它的所有子项目
@@ -20,6 +18,9 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java' //so that we can use 'compile', 'testCompile' for dependencies；can use sourceCompatibility
 apply plugin: 'visual-studio'
 
+//依赖groovy，gradle插件在groovy中，这样就可以使用compile依赖命令了
+apply plugin: 'groovy'
+
 sourceCompatibility = 1.8
 
 buildscript{//配置build脚本的classpath
@@ -28,6 +29,10 @@ buildscript{//配置build脚本的classpath
 
 repositories {//工程仓库配置
     mavenCentral()
+}
+
+task outputProjName{
+    println('rootProjName::@'+rootProject.name)
 }
 
 dependencies {//工程依赖配置
@@ -46,6 +51,32 @@ dependencies {//工程依赖配置
     //configuring dependency to specific configuration of the module  指定依赖模块的特定配置
     compile configuration: 'someConf', group: 'org.someOrg', name: 'someModule', version: '1.0'
 
+    //two methods to declare a dependency:名字和属性都是可选的
+    //1-string notion
+    compile 'group:name:version:classify@extension'
+
+    //2-map notion
+    compile group:'my-group',name: 'my-name',version: 'my-version',classifier:'my-classifier',ext:'my-extension'
+
+    //use project dependency,use default conf for my-project
+    //compile project(':my-project')
+
+    //use project dependency,use some different conf for my-project
+    //compile project(path:':my-project',name: 'specified-name',version:'specified-version')
+
+    //use file dependency,use files
+    compile files('file1.jar','file2.jar','libs/file3.jar')
+
+    //use file dependency,use fileTree,该依赖的配置会将libs下的所有都配置到项目编译的classpath
+    compile fileTree('libs')
+
+    //这样配置后gradle就会随着groovy的版本迁移
+    compile localGroovy()
+    //gradle插件需要gradleAPI接口和类
+    compile gradleApi()
+    //插件需要Gradle测试包来测试build的逻辑
+    testCompile gradleTestKit()
+
     //configuring dependency on 'someLib' module   配置依赖于某个模块
     compile(group: 'org.myorg', name: 'someLib', version:'1.0') {
         //explicitly adding the dependency artifact:
@@ -61,8 +92,21 @@ dependencies {//工程依赖配置
 }
 
 sourceSets{//本程序源集合的配置
+    main{
+        java{
+            //该配置从编译中文件中排除一些包
+            exclude 'some/unwanted/package/**'
+        }
+    }
+    //指定由groovy编译的文件
+    groovy{
 
+    }
 }
+
+//logger{
+//
+//}
 
 subprojects{//工程的子项目配置
 
@@ -123,6 +167,18 @@ task myTask1{
 }
 task myTask2{
 }
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            pom.withXml {
+                asNode().appendNode('description', 'A demonstration of Maven POM customization')
+            }
+        }
+    }
+}
+
 
 
 

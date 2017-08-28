@@ -2,8 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="dao_main" target="1.8" />
+      <module name="dao_test" target="1.8" />
+      <module name="Demo_groovy" target="1.8" />
       <module name="Demo_main" target="1.8" />
       <module name="Demo_test" target="1.8" />
+      <module name="Deno_groovy" target="1.8" />
+      <module name="Deno_main" target="1.8" />
+      <module name="Deno_test" target="1.8" />
+      <module name="MDemo_groovy" target="1.8" />
+      <module name="MDemo_main" target="1.8" />
+      <module name="MDemo_test" target="1.8" />
+      <module name="model_main" target="1.8" />
+      <module name="model_test" target="1.8" />
+      <module name="My-Demo_groovy" target="1.8" />
+      <module name="my-Demo_groovy" target="1.8" />
+      <module name="my-Demo_main" target="1.8" />
+      <module name="My-Demo_main" target="1.8" />
+      <module name="My-Demo_test" target="1.8" />
+      <module name="my-Demo_test" target="1.8" />
+      <module name="portal_main" target="1.8" />
+      <module name="portal_test" target="1.8" />
+      <module name="service_main" target="1.8" />
+      <module name="service_test" target="1.8" />
+      <module name="utils_main" target="1.8" />
+      <module name="utils_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
