@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5aef27db-16c6-4485-8001-71795d21a35b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../~$adle-task常用配置.docx" afterPath="" />
-    </list>
+    <list default="true" id="5aef27db-16c6-4485-8001-71795d21a35b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -241,8 +239,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -3839,12 +3837,12 @@
       <workItem from="1503886112673" duration="15886000" />
       <workItem from="1503904609266" duration="3034000" />
       <workItem from="1503907661375" duration="334000" />
-      <workItem from="1503908000685" duration="1318000" />
+      <workItem from="1503908000685" duration="2518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30275000" />
+    <option name="totallyTimeSpent" value="31475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1491" height="1056" extended-state="0" />
@@ -4110,13 +4108,13 @@
         <state relative-caret-position="243">
           <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="false" />
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#262#263#0" expanded="false" />
+            <element signature="e#290#291#0" expanded="false" />
+            <element signature="e#317#318#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4236,15 +4234,15 @@
         <state relative-caret-position="405">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
