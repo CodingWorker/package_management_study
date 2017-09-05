@@ -11,4 +11,11 @@
             "homepage": "http://www.php-fig.org/"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/username/hello-world"
+        }
+    ]
+
 }
