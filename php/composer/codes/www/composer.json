@@ -1,0 +1,14 @@
+{
+	"name":"my-test/hello",
+	"version":"0.1.0",
+	"description":"this is just a test",
+	"keywords":["psr", "psr-3", "log"],
+	"homepage": "https://mytest.com/php-fig/log",
+    "license": "mit-license",
+    "authors": [
+        {
+            "name": "PHP-FIG",
+            "homepage": "http://www.php-fig.org/"
+        }
+    ],
+}
