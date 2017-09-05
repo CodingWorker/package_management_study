@@ -28,11 +28,50 @@ class ComposerStaticInitcea12e6596aa22de5b2fb182ae6e5b5b
         ),
     );
 
+    public static $classMap = array (
+        'Avro' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro.php',
+        'AvroArraySchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroDataIO' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/data_file.php',
+        'AvroDataIOException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/data_file.php',
+        'AvroDataIOReader' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/data_file.php',
+        'AvroDataIOWriter' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/data_file.php',
+        'AvroDebug' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/debug.php',
+        'AvroEnumSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro.php',
+        'AvroField' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroFile' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/io.php',
+        'AvroFixedSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroGMP' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/gmp.php',
+        'AvroIO' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/io.php',
+        'AvroIOBinaryDecoder' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroIOBinaryEncoder' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroIODatumReader' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroIODatumWriter' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroIOException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/io.php',
+        'AvroIOSchemaMatchException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroIOTypeException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/datum.php',
+        'AvroMapSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroName' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroNamedSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroNamedSchemata' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroPrimitiveSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroProtocol' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/protocol.php',
+        'AvroProtocolMessage' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/protocol.php',
+        'AvroProtocolParseException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/protocol.php',
+        'AvroRecordSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroSchemaParseException' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroStringIO' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/io.php',
+        'AvroUnionSchema' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/schema.php',
+        'AvroUtil' => __DIR__ . '/..' . '/wikimedia/avro/lib/avro/util.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitcea12e6596aa22de5b2fb182ae6e5b5b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitcea12e6596aa22de5b2fb182ae6e5b5b::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitcea12e6596aa22de5b2fb182ae6e5b5b::$classMap;
 
         }, null, ClassLoader::class);
     }
