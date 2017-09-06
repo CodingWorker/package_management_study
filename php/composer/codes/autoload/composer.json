@@ -1,0 +1,17 @@
+{
+    "name": "daiyan/autoload",
+    "authors": [
+        {
+            "name": "CodingWorker",
+            "email": "dy10010@sina.cn"
+        }
+    ],
+    "require": {
+		"monolog/monolog":"~1.2"
+	},
+	"autoload": {
+        "psr-4": {"Acme\\": "src/"}
+    },
+	"php":">=5.5"
+
+}
