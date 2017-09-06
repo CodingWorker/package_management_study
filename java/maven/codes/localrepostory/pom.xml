@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--版本号-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--组织名称，可以指明该项目的功能-->
+    <groupId>com.example</groupId>
+    <!--项目名称-->
+    <artifactId>LocalRepostoryDemo</artifactId>
+    <!--当前项目的版本号-->
+    <version>1.0-SNAPSHOT</version>
+
+    <!--依赖配置-->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <!--依赖的组织名-->
+            <groupId>junit</groupId>
+            <!--依赖的项目名-->
+            <artifactId>junit</artifactId>
+            <!--依赖的版本号-->
+            <version>4.12</version>
+
+            <!--依赖范围，这里指test包下依赖此设置-->
+            <!--<scope>test</scope>-->
+        </dependency>
+    </dependencies>
+
+</project>
