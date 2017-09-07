@@ -23,7 +23,7 @@
             <version>4.12</version>
 
             <!--依赖范围，这里指test包下依赖此设置-->
-            <!--<scope>test</scope>-->
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

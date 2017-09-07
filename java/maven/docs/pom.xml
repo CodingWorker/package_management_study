@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <!-- 版本：4.0.0 -->
   <modelVersion>4.0.0</modelVersion>
+  <!-- 依赖的坐标 -->
   <!-- 组织名称：暂时使用 组织名称+项目名称 作为组织名称 -->
   <!-- 组织名称：实际名称 按照访问路径规范设置，通常以功能作为名称：eg: junit spring -->
-  <groupId>com.main.java</groupId>
+  <groupId>com.test.mvn</groupId>
   <!-- 项目名称 -->
   <artifactId>HelloMaven</artifactId>
   <!-- 当前项目版本号：同一个项目开发过程中可以发布多个版本，此处标示0.0.1版 -->
@@ -28,4 +29,3 @@
 		
 	</dependencies>
 </project>
-

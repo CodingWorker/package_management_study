@@ -1,7 +1,4 @@
-package com.main.java;
-
-import org.junit.Test;
-import static junit.framework.Assert.*;
+package com;
 
 public class HelloMaven{
 	public static void main(String[] args){
