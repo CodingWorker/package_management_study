@@ -5,6 +5,12 @@
   <!-- 组织名称：暂时使用 组织名称+项目名称 作为组织名称 -->
   <!-- 组织名称：实际名称 按照访问路径规范设置，通常以功能作为名称：eg: junit spring -->
   <groupId>com.test.mvn</groupId>
+  <!-- 指定继承自的父工程，gradle里面也有allprojects的配置具有相似的功能 -->
+  <parent>
+        <groupId>com.example</groupId>
+        <artifactId>xx</artifactId>
+        <version>1.0</version>
+    </parent>
   <!-- 项目名称 -->
   <artifactId>HelloMaven</artifactId>
   <!-- 当前项目版本号：同一个项目开发过程中可以发布多个版本，此处标示0.0.1版 -->
@@ -28,4 +34,20 @@
 		</dependency>		
 		
 	</dependencies>
+	<build>
+    <!-- 插件 -->
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+			<!-- 指定编译jdk的版本 -->
+                <source>1.8</source>
+                <target>1.8</target>
+				<!-- 编译字符集 -->
+                <encoding>utf-8</encoding>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>
