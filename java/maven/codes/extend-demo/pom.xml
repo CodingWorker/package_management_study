@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.test.mvn</groupId>
+    <artifactId>extend-demo</artifactId>
+    <version>0.0.1</version>
+    <modules>
+        <module>demo0</module>
+        <module>demo1</module>
+    </modules>
+    <!--父工程必须是pom的包模式，才能被继承-->
+    <packaging>pom</packaging>
+
+    <!--properties中的子标签可以随意指定，在下面可以直接使用，
+    相当于定义变量-->
+    <properties>
+        <junit.version>4.11</junit.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.test.mvn.example1</groupId>
+            <artifactId>example1</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <!--使用父工程来管理版本号-->
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
