@@ -1,18 +1,44 @@
-{
-	"name":"my-test/hello",
-	"version":"0.1.0",
+{	#root包的属性
+	"name":"my-test/hello",    
+	"version":"0.1.0-dev",
 	"description":"this is just a test",
-	"keywords":["psr", "psr-3", "log"],
-	"homepage": "https://mytest.com/php-fig/log",
-    "license": "mit-license",
+	"type":"library",
+	"keywords":["hello", "hi", "hi hello"],
+	"homepage": "https://mytest.com/proj-homepage",
+	"time":"2017-09-12",
+    "license": ["Apache-2.0","MIT","GPL"],
     "authors": [
         {
             "name": "PHP-FIG",
-            "homepage": "http://www.php-fig.org/"
+			"email":"myemail@myemail.com",
+            "homepage": "http://www.php-fig.org/",
+			"role":"Developer"
+        },
+		{
+            "name": "PHP-FIG2",
+			"email":"myemail2@myemail.com",
+            "homepage": "http://www.myhomepage.com",
+			"role":"Developer"
         }
     ],
+	"support": {
+        "email": "support@example.org",
+        "irc": "irc://irc.freenode.org/composer"
+    },
     "require": {
-        "monolog/monolog": "1.23"
+        "hello/myproj": "1.*",
+		"acme/foo": "@dev"
+    },
+	"suggest": {
+        "monolog/monolog": "Allows more advanced logging of the application flow"
+    },
+	"autoload": {
+        "psr-4": {
+            "Monolog\\": "src/",
+            "Vendor\\Namespace\\": ""
+        }
     }
+
+
 
 }
