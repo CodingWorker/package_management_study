@@ -89,6 +89,7 @@ under the License.
    | specification in this list marked as active will be used.
    |-->
   <proxies>
+  <!-- 配置代理以使用代理服务器连接到maven仓库 -->
     <!-- proxy
      | Specification for one proxy, to be used in connecting to the network.
      |
